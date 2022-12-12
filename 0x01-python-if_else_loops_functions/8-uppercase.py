@@ -5,5 +5,5 @@ def islower(str):
         if i >= 65 and i < 91:
             print({}.format(str), end="")
         else:
-            continue
+            print({}.format(str - 32), end="")
 
