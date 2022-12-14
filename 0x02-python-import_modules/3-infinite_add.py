@@ -9,4 +9,4 @@ if __name__ == "__main__":
     for i in range(count):
         int(sys.argv[i])
         result = result + sys.argv[i]
-
+        print("{}".format(result))
