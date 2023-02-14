@@ -3,33 +3,48 @@
 
 
 class Square:
-    """Represents a square."""
-    def __init__(self, size=0, position=(0, 0)):
-        """Private instance attribute with size"""
-        self.__size = size
-        self.__position = position
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+    """Represent a square."""
 
-    def area(self):
-        """Returns the area of the square"""
-        return "{}".format(self.__size * self.__size)
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialize a new square.
+        Args:
+            size (int): The size of the new square.
+        """
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        """For retrieving the value"""
-        return self.__size
+        """Get/set the current size of the square."""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
-        """For setting the value for the size"""
         if type(value) != int:
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    @property
+    def position(self):
+        """Get the current position of the square."""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """set the current position of the square."""
+        if type(value) != tuple or len(value) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if type(value[0]) != int or value[0] < 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if type(value[1]) != int or value[1] < 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        self.__position = value
+
+    def area(self):
+        """Return the current area of the square."""
+        return (self.__size * self.__size)
 
     def my_print(self):
         """Prints a square."""
@@ -44,15 +59,3 @@ class Square:
             for j in range(self.__size):
                 print('#', end="")
             print()
-
-    @property
-    def position(self):
-        """for retrieving the value"""
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """To set the value"""
-        if len(value) != 2 or value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
