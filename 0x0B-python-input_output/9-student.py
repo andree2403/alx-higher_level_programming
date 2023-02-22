@@ -12,4 +12,4 @@ class Student:
 
     def to_json(self):
         """public method for retrieving dict representation"""
-        return vars(student)
+        return vars(Student)
