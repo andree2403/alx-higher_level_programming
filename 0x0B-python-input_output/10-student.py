@@ -13,7 +13,7 @@ class Student:
     def to_json(self, attrs=None):
         """public method for retrieving dict representation"""
         if type(attrs) == list and all(type(item) == str for item in attrs):
-            my_dict = []
+            my_dict = {}
             for items in attrs:
                 if hasattr(self, items):
                     my_dict[items] = getattr(self, items)
