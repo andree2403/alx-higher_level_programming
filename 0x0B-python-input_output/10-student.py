@@ -17,6 +17,6 @@ class Student:
             for items in attrs:
                 if hasattr(self, items):
                     my_dict[items] = getattr(self, items)
-                    return my_dict
+            return my_dict
         else:
             return vars(self)
