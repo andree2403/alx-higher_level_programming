@@ -13,6 +13,6 @@ class Student:
     def to_json(self, attrs=None):
         """public method for retrieving dict representation"""
         if type(attrs) == list:
-            return vars(self.attrs)
+            return vars(attrs)
         else:
             return vars(self)
