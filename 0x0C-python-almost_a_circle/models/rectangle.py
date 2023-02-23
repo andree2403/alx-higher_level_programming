@@ -79,8 +79,9 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             print("")
             return
-
+        [print("") for y in range(self.__y)]
         for i in range(self.__height):
+            [print(" ", end="") for x in range(self.__x)]
             for j in range(self.__width):
                 print('#', end="")
             print()
