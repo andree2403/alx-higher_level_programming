@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a Base class"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -76,6 +76,11 @@ class Rectangle(Base):
 
     def display(self):
         """displays with #"""
+        if self.__width == 0 or self.__height == 0:
+            print("")
+            return
+
         for i in range(self.__height):
             for j in range(self.__width):
                 print('#', end="")
+            print()
