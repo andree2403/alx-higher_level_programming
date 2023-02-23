@@ -24,7 +24,6 @@ class Rectangle(Base):
         """sets the value of width"""
         self.__width = width
 
-
     @property
     def height(self):
         """gets the value of height"""
