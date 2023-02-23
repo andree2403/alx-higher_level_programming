@@ -90,4 +90,5 @@ class Rectangle(Base):
         """returns the representation of the answer"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.__x, self.__y,
-                                                       self.__width, self.__height)
+                                                       self.__width,
+                                                       self.__height)
