@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a Base class"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -95,8 +95,12 @@ class Rectangle(Base):
 
     def update(self, *args):
         """update an assign argument"""
-        self.id = args[0]
-        self.__width = args[1]
-        self.__height = args[2]
-        self.__x = args[3]
-        self.__y = args[4]
+        try:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+        except IndexError:
+            pass
+
