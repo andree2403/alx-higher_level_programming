@@ -19,6 +19,5 @@ class Base:
         """convert to json string"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        else:
-            jsonstring = json.dumps(list_dictionaries)
-            return jsonstring
+        jsonstring = json.dumps(list_dictionaries)
+        return jsonstring
