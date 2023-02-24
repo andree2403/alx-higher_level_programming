@@ -49,4 +49,4 @@ class Square(Rectangle):
                 if k == 'x':
                     self.x = v
                 if k == 'y':
-                    self = v
+                    self.y = v
