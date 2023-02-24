@@ -89,17 +89,30 @@ class Rectangle(Base):
     def __str__(self):
         """returns the representation of the answer"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                       self.__x, self.__y,
-                                                       self.__width,
-                                                       self.__height)
+                                                       self.x, self.y,
+                                                       self.width,
+                                                       self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update an assign argument"""
-        try:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
-        except IndexError:
-            pass
+        if len(args) == 0:
+           for k, v in kwargs.items():
+                if k == 'id':
+                    self.id = v
+                if k == 'width':
+                    self.__width = v
+                if k == 'height':
+                    self.__height = v
+                if k == 'x':
+                    self.__x = v
+                if k == 'y':
+                    self.__y = v 
+        else:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
