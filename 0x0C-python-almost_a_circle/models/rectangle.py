@@ -96,7 +96,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """update an assign argument"""
         if len(args) == 0:
-           for k, v in kwargs.items():
+            for k, v in kwargs.items():
                 if k == 'id':
                     self.id = v
                 if k == 'width':
@@ -106,7 +106,7 @@ class Rectangle(Base):
                 if k == 'x':
                     self.__x = v
                 if k == 'y':
-                    self.__y = v 
+                    self.__y = v
         else:
             try:
                 self.id = args[0]
