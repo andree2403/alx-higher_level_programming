@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """shebang"""
+import json
+"""imported json module"""
 
 
 class Base:
