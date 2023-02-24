@@ -60,6 +60,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """load the json file and return instances"""
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r') as f:
