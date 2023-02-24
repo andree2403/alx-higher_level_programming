@@ -23,3 +23,9 @@ class Base:
             return "[]"
         jsonstring = json.dumps(list_dictionaries)
         return jsonstring
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """save the json string to a file"""
+        with open('Base.json', 'w', encoding=utf-8):
+            json.dumps(list_objs, Base.json)
