@@ -64,7 +64,7 @@ class Base:
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r') as f:
-                if filename == None:
+                if filename is None:
                     return "[]"
                 else:
                     list_dicts = base.from_json_string(jsonfile.read())
