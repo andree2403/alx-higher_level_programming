@@ -32,4 +32,4 @@ class Base:
             if list_objs is None:
                 f.write("[]")
             else:
-                f.write(cls.to_json_string)
+                f.write(cls.to_json_string())
