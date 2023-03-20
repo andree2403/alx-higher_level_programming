@@ -1,4 +1,8 @@
 #!/usr/bin/node
-exports.esrever = function (list)
-  for (let i = list.length - 1; i = 0; i--) {
-    console.log(list[i]);
+exports.esrever = function (list) {
+  const arr = [];
+  for (let i = list.length - 1; i > 0; i--) {
+    let arrays= arr.push(list[i]);
+  }
+  console.log(arrays);
+}
