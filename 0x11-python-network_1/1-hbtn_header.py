@@ -6,5 +6,5 @@ import urllib.request
 if __name__ == "__main__":
     req = sys.argv[1]
     with urllib.request.urlopen(req) as response:
-           ans = response.read()
-           print(dict(response.headers).get("X-Request-Id"))
+        ans = response.read()
+        print(dict(response.headers).get("X-Request-Id"))
