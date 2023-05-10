@@ -9,10 +9,8 @@ import sys
 from urllib import request, error
 
 if __name__ == "__main__":
-    req = urllib.request.Request(sys.argv[1])
     try:
-        with urllib.request.urlopen(req) as response:
-            html = response.read()
-            print(html.decode("UTF-8"))
+        with urllib.request.urlopen(sys.argv[1]) as response:
+            print(html.read().decode('UTF-8'))
     except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
